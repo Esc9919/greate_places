@@ -12,9 +12,12 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: Theme.of(context).colorScheme.primary,
-        iconTheme: colo,
-        title: const Text('Novo Lugar'),
+        title: const Text(
+          'Novo Lugar',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: const Center(
         child: Text('Form!!!'),
