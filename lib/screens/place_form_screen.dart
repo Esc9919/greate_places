@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greate_places/widgets/image_input.dart';
 
 class PlaceFormScreen extends StatefulWidget {
   const PlaceFormScreen({super.key});
@@ -8,6 +9,11 @@ class PlaceFormScreen extends StatefulWidget {
 }
 
 class _PlaceFormScreenState extends State<PlaceFormScreen> {
+
+  final _titleController = TextEditingController();
+
+  void _submitForm() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,8 +25,39 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: const Center(
-        child: Text('Form!!!'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    TextField(
+                      controller: _titleController,
+                      decoration: InputDecoration(
+                        labelText: 'Título',
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    const ImageInput(),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          ElevatedButton.icon(
+            onPressed: _submitForm,
+            label: Text('Adicionar'),
+            icon: Icon(Icons.add),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Theme.of(context).colorScheme.secondary,
+              elevation: 0,
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            ),
+          ),
+        ],
       ),
     );
   }
