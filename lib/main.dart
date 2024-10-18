@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:greate_places/providers/greate_places.dart';
+import 'package:greate_places/providers/great_places.dart';
 import 'package:greate_places/screens/place_form_screen.dart';
 import 'package:greate_places/screens/places_list_screen.dart';
 import 'package:greate_places/utils/app_routes.dart';
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (ctx) => GreatePlaces(),
+      create: (ctx) => GreatPlaces(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Great Places',

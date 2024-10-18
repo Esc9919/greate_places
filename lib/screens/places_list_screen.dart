@@ -1,7 +1,6 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:greate_places/providers/greate_places.dart';
+import 'package:greate_places/providers/great_places.dart';
 import 'package:greate_places/utils/app_routes.dart';
 import 'package:provider/provider.dart';
 
@@ -29,7 +28,7 @@ class PlacesListScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Consumer<GreatePlaces>(
+      body: Consumer<GreatPlaces>(
         child: Center(
           child: Text('Nenhum local cadastrado'),
         ),
