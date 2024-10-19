@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             primary: Colors.blueAccent,
             secondary: Colors.amber,
           ),
-          canvasColor: Colors.white,
+          canvasColor: Colors.white, 
           useMaterial3: true,
         ),
         home: const PlacesListScreen(),
